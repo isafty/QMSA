@@ -13,6 +13,6 @@ class AppTheme {
   static const Color errorColor = Colors.redAccent;
 
   static final darkThemeMode = ThemeData.dark().copyWith(
-    scaffoldBackgroundColor: AppTheme.backgroundColor,
+    scaffoldBackgroundColor: AppTheme.whiteColor,
   );
 }

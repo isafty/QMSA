@@ -1,5 +1,8 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_svg/flutter_svg.dart';
 import 'package:qms_app/core/theme/app_theme.dart';
+import 'package:qms_app/core/utils/app_router.dart';
+import 'package:qms_app/core/utils/app_strings.dart';
 
 void main() {
   runApp(const MyApp());
@@ -11,18 +14,11 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      title: 'QMS App',
+    return MaterialApp.router(
+      debugShowCheckedModeBanner: false,
+      title: AppStrings.appTitle,
       theme: AppTheme.darkThemeMode,
-      home: Scaffold(
-        appBar: AppBar(title: const Text('QMS App Home Page')),
-        body: const Center(
-          child: Text(
-            'Welcome to QMS App!',
-            style: TextStyle(color: AppTheme.whiteColor),
-          ),
-        ),
-      ),
+      routerConfig: router,
     );
   }
 }
